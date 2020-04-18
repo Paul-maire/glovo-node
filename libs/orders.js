@@ -1,14 +1,14 @@
 module.exports = client => {
 
-	const deliveryArea = async _ => await client.get('/b2b/working-areas')
+	const deliveryArea = async _ => await client.get('/b2b/working-areas').catch(console.error)
 
-	const estimate = async body => await client.post('/b2b/orders/estimate', body)
+	const estimate = async body => await client.post('/b2b/orders/estimate', body).catch(console.error)
 
-	const order = async body => await client.post('/b2b/orders', body)
+	const order = async body => await client.post('/b2b/orders', body).catch(console.error)
 
-	const cancel = async order_id => await client.post(`/b2b/orders/${order_id}/cancel`)
+	const cancel = async order_id => await client.post(`/b2b/orders/${order_id}/cancel`).catch(console.error)
 
-	const find = async order_id => await client.get(`/b2b/orders/${order_id}`)
+	const find = async order_id => await client.get(`/b2b/orders/${order_id}`).catch(console.error)
 
 	const list = async ({ limit = null , offset = null } = {}) => {
 
@@ -19,9 +19,9 @@ module.exports = client => {
 		if (offset) params.offset = offset
 
 		const search = new URLSearchParams(params).toString()
-		if (search) url = `${url}?${search.toString()}`
+		if (search) url = `${url}?${search}`
 
-		return await client.get(url)
+		return await client.get(url).catch(console.error)
 	}
 
 	return {

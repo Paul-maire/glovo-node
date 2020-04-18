@@ -12,7 +12,7 @@ module.exports = ({
 	if (!api_key) throw Error('glovo-api-node: api_key is required') 
 	if (!api_secret) throw Error('glovo-api-node: api_secret is required')
 
-	const keys = new Buffer(`${api_key}:${api_secret}`)
+	const keys = Buffer.from(`${api_key}:${api_secret}`)
 	const token = keys.toString('base64')
 	const headers = {
 		...header_options,
