@@ -77,8 +77,8 @@ await glovo.tracking.position(<your_order_id>)
 see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
 
 ## Configuration
-baseURL => Glovo API URL
-api_key => Your public API key
-api_secret => Your secret API key
-header_options => header config (axios)
-client_options => axios options
+- baseURL => Glovo API URL
+- api_key => Your public API key
+- api_secret => Your secret API key
+- header_options => header config (axios) object
+- client_options => axios options object
