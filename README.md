@@ -12,7 +12,7 @@ yarn add glovo-node
 ```
 
 ```javascript
-const glovo_node = require('glovo-api-node')
+const glovo_node = require('glovo-node')
 
 const glovo = glovo_node({
 	baseURL: '<Glovo base url>',
