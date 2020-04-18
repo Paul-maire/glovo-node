@@ -1,10 +1,7 @@
 {
-  "name": "glovo-api-node",
-  "version": "0.1.0",
+  "name": "glovo-node",
+  "version": "0.1.2",
   "description": "Glovo API mapping for Node JS based on Axios",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "main": "index.js",
   "author": "Paul Maire",
   "license": "MIT",

@@ -2,6 +2,15 @@
 
 ## Get started
 
+### NPM
+```bash
+npm i glovo-node
+```
+### Yarn
+```bash
+yarn add glovo-node
+```
+
 ```javascript
 const glovo_node = require('glovo-api-node')
 
@@ -19,39 +28,38 @@ const glovo = glovo_node({
 ```javascript
 await glovo.orders.deliveryArea()
 ```
-see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
+see response [Working areas](https://api-docs.glovoapp.com/b2b/index.html#get-working-areas)
 
 #### Estimate price
 ```javascript
 await glovo.orders.estimate(params)
 ```
-see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
+see response and params [Estimate order price](https://api-docs.glovoapp.com/b2b/index.html#estimate-order-price)
 
 #### Create order
 ```javascript
 await glovo.orders.order(params)
 ```
-see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
+see response [Create order](https://api-docs.glovoapp.com/b2b/index.html#create-a-one-way-order)
 
 #### Cancel
 ```javascript
 await glovo.orders.cancel(<your_order_id>)
 ```
-see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
+see response [Cancel order](https://api-docs.glovoapp.com/b2b/index.html#cancel-order)
 
 #### Find one
 ```javascript
 await glovo.orders.find(<your_order_id>)
 ```
-see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
+see response [Get single order](https://api-docs.glovoapp.com/b2b/index.html#get-single-order)
 
 #### List
 ```javascript
 await glovo.orders.list()
 await glovo.orders.list({ limit, offset })
 ```
-see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
-
+see response [Get orders list](https://api-docs.glovoapp.com/b2b/index.html#get-orders-list)
 
 
 ### Courier
@@ -69,3 +77,8 @@ await glovo.tracking.position(<your_order_id>)
 see response [Order tracking](https://api-docs.glovoapp.com/b2b/index.html#get-order-tracking)
 
 ## Configuration
+baseURL => Glovo API URL
+api_key => Your public API key
+api_secret => Your secret API key
+header_options => header config (axios)
+client_options => axios options
