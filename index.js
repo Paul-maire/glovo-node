@@ -1,4 +1,4 @@
-const client = require('./client')
+const glovo_client = require('./client')
 
 const {
 	courier,
@@ -6,8 +6,12 @@ const {
 	tracking
 } = require('./libs')
 
-module.exports = {
-	courier: courier(client),
-	orders: orders(client),
-	tracking: tracking(client),
+module.exports = config => {
+	const client = glovo_client(config)
+	
+	return {
+		courier: courier(client),
+		orders: orders(client),
+		tracking: tracking(client),
+	}
 }
