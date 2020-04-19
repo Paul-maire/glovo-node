@@ -1,7 +1,11 @@
 {
   "name": "glovo-node",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Glovo API mapping for Node JS based on Axios",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Paul-maire/glovo-node.git"
+  },
   "main": "index.js",
   "author": "Paul Maire",
   "license": "MIT",
