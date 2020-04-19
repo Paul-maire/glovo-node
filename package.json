@@ -1,6 +1,6 @@
 {
   "name": "glovo-node",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Glovo API mapping for Node JS based on Axios",
   "main": "index.js",
   "author": "Paul Maire",
